@@ -1,0 +1,17 @@
+name: delivery-route-optimization
+
+description: AI agent learns to optimize delivery routes in a grid city
+
+actions:
+  - up
+  - down
+  - left
+  - right
+
+state:
+  type: agent_position + delivery_points
+
+reward:
+  step_penalty: -1
+  delivery_reward: +10
+  completion_bonus: +20
